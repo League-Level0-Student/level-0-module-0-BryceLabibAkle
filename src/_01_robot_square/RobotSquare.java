@@ -12,22 +12,30 @@ public class RobotSquare {
     public static void main(String[] args) throws Exception {
  
     	// 1. Make a new Robot
+    	Robot francis = new Robot();
 
 
         // 3. Put the robot's pen down
+    	francis.penDown();
 
 
         // 6. Make the robot move as fast as possible
+    	francis.setSpeed(999);
 
-
-        // 5. Do everything below here 4 times
-
-
-        //         2. Move your robot 200 pixels
-
-
-        //         4. Turn the robot 90 degrees to the right (90 degrees)
-
-
+    	int degree = 90;
+    	int red = 255;
+    	int blue = 2;
+    	int green = 50;
+    	for (int i = 0; i < 9999999; i++) {
+    		degree = degree*5;
+    		
+    		red = red - 100;
+    		blue += 30;
+    		green = red - blue;
+    		
+    		francis.move(200);
+    		francis.turn(degree);
+    		francis.setPenColor(red, blue, green);
+    	}
     }
 }
