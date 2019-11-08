@@ -19,5 +19,6 @@ public class RoboGraffiti {
 		 letterA.move(100);
 		 letterA.hide();
 		 
+		 
 	}
 }
